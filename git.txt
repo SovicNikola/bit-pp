@@ -1,0 +1,25 @@
+Open Git Bash (execute commands and make commit locally)
+pwd (explain relative and absolute paths again)
+cd student_name_folder
+pwd
+ls (ll)
+cd bit-pp -------------------------- >> isti ovaj folder treba da nparvim u git hub-u i onda citam tu adresu za kasnije kada dodajem			
+ls (ll)
+git init
+git status
+git add hello.txt
+git commit (error because of missing global user will appear)
+git config --global user.name “BIT student” ----------->>>> to je ime racunara i treba ja da dodam svoje sa svog kompa !!!!
+Students should use their name when configuring git at home
+git config --global user.email “classroom@bgit.rs” ----------------------->>>> dodajem svoju adresu sa svog kompa !!!!!! 
+Students should use their email when configuring git at home
+git commit -m “Hello” ----- >>> ovo Hello je komentar koji dodajem, da znam sta sam ubacivao... !!! 
+git status
+git log
+Connect the local and the remote repository
+git remote add origin http://student-repo-link ----- >>> ovde ide moj jedinstveni link iz github-a !!!!
+git push -u origin master 
+Visit GitHub to verify that the code is there, refresh the page
+
+
+ovo origin moze da bude i neko drgo ime ali za pocetak je laske da stoji tako i da ne buni !!!! 
