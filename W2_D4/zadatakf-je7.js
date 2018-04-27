@@ -1,15 +1,15 @@
-function stringConvertion(string) {
-    var array = [];
+function Prime(Broj) {
+    for (i = Broj - 1; i > 1; i--) {
+        if (Broj % i == 0) {
 
-    for (i = 0; i < string.length; i++) {
-        if (string[i] !== " ") {
-            array[i] = string[i];
-        } else {
-            array[i] = null;
         }
     }
-    return array;
+    return true;
 }
-var array = [];
-array = stringConvertion('This !');
-console.log(array);
+var result = Prime(41);
+if (result == true) {
+    console.log("Yes");
+}
+else {
+    console.log("No")
+}
