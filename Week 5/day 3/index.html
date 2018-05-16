@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Movie festival</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <h1>Movie Festival</h1>
+
+    <div id="whole">
+        <p>Please fill in the form</p>
+
+        <fieldset id="fieldset">
+            <legend>Movie</legend>
+            <label>Title
+                </br>
+                </br>
+
+                <input id="title" type="text" name="title">
+            </label>
+            <br>
+            </br>
+
+            <label>Length(min)
+                </br>
+                </br>
+
+                <input id="length" type="text" name="length">
+            </label>
+            <br>
+            </br>
+
+            <select class="dropdown" name="Genre" id="genre">
+                <option value="-">-</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Horror">Horror</option>
+                <option value="Action">Action</option>
+                <option value="Drama">Drama</option>
+                <option value="Sci-fi">Sci-fi</option>
+            </select>
+            <br>
+            </br>
+
+            <input class="button" id="createMovie" type="button" value="Create movie">
+            <div>
+                <div id="current-array"></div>
+            </div>
+            <div>
+                <span id='error'></span>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Program</legend>
+            <label for="date">Date
+                </br>
+                </br>
+                <input id="date" type="date" name="date">
+            </label>
+            <br>
+            </br>
+
+            <input class="button" id="createProgram" type="button" value="Create program">
+            <div>
+                <div id="second-array"></div>
+            </div>
+            <div>
+                <span id='error2'></span>
+            </div>
+            <br>
+            <br>
+            <label>Movie
+                <select class="dropdown" name="movie" id="movieDrop">
+                    <option value="-">-</option>
+                </select>
+            </label>
+            <br>
+            <label>Program
+                <select class="dropdown" name="program" id="programDrop">
+                    <option value="-">-</option>
+                </select>
+            </label>
+            <br>
+            <br>
+            <input class="button" id="addMovie" type="button" value="Add movie to program">
+        </fieldset>
+    </div>
+    <script type="text/javascript" src="js/entities.js"></script>
+    <script type="text/javascript" src="js/form.js"></script>
+</body>
+
+
+
+</html>
