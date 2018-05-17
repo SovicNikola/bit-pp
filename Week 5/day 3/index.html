@@ -36,10 +36,10 @@
             </br>
 
             <select class="dropdown" name="Genre" id="genre">
-                <option value="-">-</option>
                 <option value="Comedy">Comedy</option>
                 <option value="Horror">Horror</option>
                 <option value="Action">Action</option>
+                <option value="-" selected="selected">-</option>
                 <option value="Drama">Drama</option>
                 <option value="Sci-fi">Sci-fi</option>
             </select>
@@ -48,7 +48,9 @@
 
             <input class="button" id="createMovie" type="button" value="Create movie">
             <div>
-                <div id="current-array"></div>
+                <div id="current-array">
+
+                </div>
             </div>
             <div>
                 <span id='error'></span>
@@ -83,10 +85,20 @@
                 <select class="dropdown" name="program" id="programDrop">
                     <option value="-">-</option>
                 </select>
+
             </label>
             <br>
             <br>
-            <input class="button" id="addMovie" type="button" value="Add movie to program">
+
+
+            <input class="button" id="addMovieToProgram" type="button" value="Add movie to program">
+
+            <div>
+                <span id='error3'></span>
+            </div>
+
+            <br>
+            <br>
         </fieldset>
     </div>
     <script type="text/javascript" src="js/entities.js"></script>
