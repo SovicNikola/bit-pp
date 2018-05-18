@@ -35,7 +35,7 @@ function createMovie() {
     var DropOption = "<option> - </option>";
     for (var i = 0; i < array.length; i++) {
         list += "<li>" + array[i].getData() + "</li>";
-        DropOption += "<option>" + array[i].getData() + "</option>";
+        DropOption += "<option value='" + i + "'>" + array[i].getData() + "</option>";
     }
 
     list += "</ul>";
@@ -64,6 +64,8 @@ function createProgram() {
     if (new Date(date) > today) {
         var program = new Program(date);
         array2.push(program);
+        console.log(array2);
+
     } else {
         error2Element.textContent = 'Please, insert valid date!';
     }
@@ -77,7 +79,7 @@ function createProgram() {
     for (var i = 0; i < array2.length; i++) {
         list2 += "<li>" + array2[i].getData() + "</li>";
 
-        ProgramDropAdd += "<option>" + array2[i].getData() + "</option>";
+        ProgramDropAdd += "<option value='" + i + "'>" + array2[i].getData() + "</option>";
 
     }
 
@@ -95,31 +97,38 @@ document.querySelector('#addMovieToProgram').addEventListener('click', function 
 function addMovieToProgram() {
     var ProgramDrop = document.querySelector('#programDrop');
     var movie;
-    //var program;
+    movie = array[movieDrop.value];
+    console.log(movie);
+
+    var program;
+    program = array2[ProgramDrop.value];
     var ProgramFinal = document.querySelector('#second-array');
     var movieDropDown = document.querySelector('#movieDrop');
 
-    for (i = 0; i < array.length; i++) {
+    // for (i = 0; i < array.length; i++) {
 
-        if (movieDropDown.value == array[i].getData()) {
-            movie = array[i];
-        }
-    }
-    for (var j = 0; j < array2.length; j++) {
-        if (ProgramDrop.value == array2[j].getData()) {
-            program = array2[j];
-            break;
-        }
-    }
-
-    array2[j].addMovie(movie);
+    //     if (movieDropDown.value == array[i].getData()) {
+    //         movie = array[i];
+    //     }
+    // }
+    // for (var j = 0; j < array2.length; j++) {
+    //     console.log(ProgramDrop.value)
+    //     console.log(ProgramDrop.length)
+    //     console.log(array2[j].getData())
+    //     console.log(array2[j].getData().length)
+    //     if (ProgramDrop.value == array2[j].getData()) {
+    //         program = array2[j];
+    //         break;
+    //     }
+    // }
+    program.addMovie(movie);
     //console.log(program);
 }
 
 function Update() {
 
     console.log(array2);
-    var list2 = "<ul><li>smrc</li>";
+    var list2 = "<ul>";
     var secondArrayElement = document.querySelector('#second-array');
     for (var i = 0; i < array2.length; i++) {
         list2 += "<li>" + array2[i].getData() + "</li>";
@@ -132,4 +141,22 @@ function Update() {
     secondArrayElement.innerHTML = list2;
 
     //TODO update za select listicu
+
+    // function UpdateProgram() {
+
+    //     //  var list2 = "<ul><li>smrc</li>";
+    //     var secondArrayElement = document.querySelector('#second-array');
+    //     for (var i = 0; i < array2.length; i++) {
+    //         list2 += "<li>" + array2[i].getData() + "</li>";
+
+    //     }
+
+    //     list2 += "</ul>";
+    //     console.log(list2);
+
+    //     secondArrayElement.innerHTML = list2;
+
+
+    // }
+
 }

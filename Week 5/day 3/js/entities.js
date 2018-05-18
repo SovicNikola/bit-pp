@@ -1,7 +1,7 @@
 
 function Movie(title, length, genre) {
     this.title = title;
-    this.length = length;
+    this.length = parseInt(length);
     this.genre = genre;
 
 }
@@ -10,7 +10,7 @@ function Movie(title, length, genre) {
 
 Movie.prototype.getData = function () {
     var result = "";
-    result += this.title + ", " + this.length + " min, " + this.genre[0] + this.genre[genre.length - 1].toUpperCase();
+    result += this.title + ", " + this.length + " min, " + this.genre[0] + this.genre[genre.length - 1];
     return result;
 };
 
@@ -38,20 +38,28 @@ function Program(date) {
     this.numberOfMovies = 0;
 }
 Program.prototype.addMovie = function (movie) {
-    //for (var i = 0; i < this.listOfMovies.length; i++) {
+
     this.listOfMovies.push(movie);
     this.numberOfMovies++;
-    //    return this.listOfMovies;
-    // }
+
 }
 Program.prototype.totalLengthOfProgram = function () {
+    // this.listOfMovies = [];
     var result = 0;
     for (var i = 0; i < this.listOfMovies.length; i++) {
-        result += parseFloat(this.listOfMovies[i].length);
+        result += this.listOfMovies[i].length;
     }
     return result;
 }
 Program.prototype.getData = function () {
+    // this.listOfMovies = [];
+    // var result = 0;
+    // for (var i = 0; i < this.listOfMovies.length; i++) {
+    //     result += this.listOfMovies[i].length;
+    // }
+    console.log(this.listOfMovies.length)
+
+
     if (this.numberOfMovies == 0) {
         return this.date + ", program duration: TBA"
     } else {
@@ -59,13 +67,13 @@ Program.prototype.getData = function () {
     }
 }
 
-var p = new Program(new Date());
+// var p = new Program(new Date());
 
-var m1 = new Movie("test1", 123, 'drama');
-var m2 = new Movie("test2", 143, 'drama');
+// var m1 = new Movie("test1", 123, 'drama');
+// var m2 = new Movie("test2", 143, 'drama');
 
-p.addMovie(m1);
-p.addMovie(m2);
+// p.addMovie(m1);
+// p.addMovie(m2);
 
-console.log(p);
-console.log(p.getData());
+// console.log(p);
+// console.log(p.getData());
