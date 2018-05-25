@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+    <h1>Movie Festival</h1>
+    <div class="container">
+        <div class="form">
+            Please fill in the form!
+            <p>Movie</p>
+            <div class="granica">
+                <label> Title
+                    <br>
+                    <input type="text" id="title" class="shadow">
+                </label>
+
+
+                <div class="form">
+                    <label for="minutes"> Length (min)
+                        <br>
+                        <input type="text" id="minutes" class="shadow">
+                    </label>
+                </div>
+
+                <div class="form">
+                    <select class="dropDown" id="zanr" class="shadow">
+                        <option value="-">-</option>
+                        <option value="Horor">Horor</option>
+                        <option value="Action">Action</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Comedy">Comedy</option>
+                    </select>
+                </div>
+
+                <div class="form">
+                    <input type="button" class="btn" value="Create movie" id="create-movie-btn" class="shadow">
+                </div>
+                <div id="show-movies">
+
+                </div>
+                <div class="form">
+                    <span id="error-show"></span>
+                </div>
+            </div>
+            <p>Program</p>
+            <div class="granica">
+                <div>
+                    <div>
+                        <label for="date">Date
+                            <br>
+                            <input type="date" name="" id="dateInput" class="shadow">
+                        </label>
+                    </div>
+                    <div>
+                        <label for="programName">Program Name
+                            <br>
+                            <input type="text" id="programName" class="shadow">
+                        </label>
+                    </div>
+                    <div>
+                        <input type="button" class="btn" value="Create program" id="btn-create-program" class="shadow">
+                    </div>
+                    <div id="show-program">
+
+                    </div>
+
+                    <div id="error-date">
+
+                    </div>
+
+                    <div>
+                        Movie
+                        <select name="" class="dropDown" id="movie-list" class="shadow">
+                            <option value="-">-</option>
+                        </select>
+
+                    </div>
+
+                    <div>
+                        Program
+                        <select name="" class="dropDown" id="dropProgram" class="shadow">
+                            <option value="-">-</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="button" class="btn" value="Add movie to program" id="btn-add-movie-to-program" class="shadow">
+                    </div>
+                    <div>
+                        <span id="error"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<!-- <script src="js/entities.js" type="text/javascript"></script>
+<script src="js/form.js" type="text/javascript"></script> -->
+<script src="js/UIModul.js" type="text/javascript"> </script>
+<script src="js/dataModul.js" type="text/javascript"></script>
+<script src="js/mainModule.js" type="text/javascript"></script>
+
+</html>
