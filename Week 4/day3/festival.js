@@ -88,7 +88,7 @@
             //     return result;
             // }
         }
-        Festival.prototype.addProgram = function () {
+        Festival.prototype.addProgram = function (program) {
 
             this.listOfProgram.push(program);
             this.numOfAllMovies += program.numOfMovies;
